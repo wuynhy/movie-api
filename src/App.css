@@ -1,0 +1,122 @@
+/* ===== Base layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #2b3c4e;
+  padding: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+}
+
+#search-section {
+  background: #33485e;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-section input,
+#search-section select {
+  height: 35px;
+  font-size: 15px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #b9cfe6;
+  background: #fff;
+}
+
+#main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 16px;
+}
+
+@media (min-width: 1300px) {
+  #main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1299px) {
+  #main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  #main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+}
+.movie {
+  background: #ffffff;
+  border: 1px solid #e6e6ef;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.movie-info {
+  padding: 0 12px 10px;
+  text-align: center;
+}
+
+.poster-wrap {
+  background: #ffffff;
+  border-radius: 18px;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  bottom: 0;
+}
+
+#pager button {
+  background: #3192f4; 
+  color: #fff; 
+  border: none; 
+  border-radius: 8px;
+  padding: 8px 16px; 
+  font-size: 16px; 
+  cursor: pointer;
+}
+
+#pager button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
